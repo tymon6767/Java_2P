@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 6 Trzaskalski</title>
+</head>
+<body>
+    <h2>Zadanie 6 teoretyczne</h2>
+
+    <p><b><u>1) Rodzaje okienek</u></b></p>
+    <p>W JavaScript wyróżniamy trzy podstawowe rodzaje okienek dialogowych:</p>
+    <ul>
+        <li>
+            <b>alert</b> – wyświetla okienko dialogowe z informacją oraz przyciskiem OK. Służy do przekazania
+            użytkownikowi komunikatu, który musi on potwierdzić przyciskiem OK.
+        </li>
+        <li>
+            <b>prompt</b> – generuje okno, w którym użytkownik może wpisać wartość, zwracaną następnie do
+            programu. Jeśli użytkownik naciśnie OK, metoda zwraca wpisaną wartość, a jeśli Cancel – zwraca null.
+        </li>
+        <li>
+            <b>confirm</b> – służy do tego, aby użytkownik coś potwierdził (stąd nazwa confirm). Po naciśnięciu OK
+            metoda zwraca <i>true</i>, a po naciśnięciu Cancel zwraca <i>false</i>.
+        </li>
+    </ul>
+
+    <p><b><u>2) Konwersje liczb</u></b></p>
+    <p>
+        Wartość wczytana za pomocą okienka prompt jest zawsze ciągiem znaków (typu String), dlatego przed
+        wykonaniem obliczeń trzeba dokonać konwersji na wartość liczbową. Służą do tego funkcje:
+    </p>
+    <ul>
+        <li><b>parseFloat(zmienna)</b> – konwertuje zmienną do typu zmiennoprzecinkowego (float).</li>
+        <li><b>parseInt(zmienna)</b> – konwertuje zmienną do typu całkowitego (int).</li>
+        <li><b>toString(zmienna)</b> – konwertuje zmienną do typu łańcuchowego (tekstowego).</li>
+    </ul>
+
+    <p><b><u>3) Zasady nadawania nazw zmiennym</u></b></p>
+    <p>Przy nadawaniu nazw zmiennym należy przestrzegać trzech podstawowych zasad:</p>
+    <ol>
+        <li>
+            Nazwa zmiennej musi się zaczynać od litery, znaku "$" lub "_" i może zawierać wyłącznie litery
+            (bez polskich znaków), cyfry oraz znaki "$" i "_" (np. poprawnie: zmienna1, $wynik, _rozmiar; błędnie:
+            1zmienna, wynik gry, wysokość).
+        </li>
+        <li>
+            Wielkość liter ma znaczenie – zmienne "Rekord" i "rekord" są dwiema różnymi zmiennymi. Jest to
+            częsta przyczyna błędów u początkujących programistów.
+        </li>
+        <li>Nie należy używać słów kluczowych JavaScript jako nazw zmiennych.</li>
+    </ol>
+
+    <p><b><u>4) Typy zmiennych w JavaScript</u></b></p>
+    <p>
+        W JavaScript nie definiuje się typu zmiennej z góry (tak jak np. w C++) – typ jest ustalany
+        automatycznie w momencie przypisania wartości. Podstawowe typy to:
+    </p>
+    <ul>
+        <li><b>Number</b> – typ liczbowy (zmienne całkowite oraz zmiennoprzecinkowe).</li>
+        <li><b>String</b> – typ tekstowy (łańcuchy znaków).</li>
+        <li><b>Boolean</b> – typ logiczny (true / false).</li>
+        <li><b>Null</b> – pusta zawartość.</li>
+        <li><b>Undefined</b> – typ niezidentyfikowany (zmienna zadeklarowana, ale bez wartości).</li>
+        <li><b>Object</b> – obiekt.</li>
+    </ul>
+
+    <input type="button" value="zamknij okno" onclick="window.close()" />
+</body>
+</html>

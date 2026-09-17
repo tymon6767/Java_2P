@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 9 Trzaskalski</title>
+    <script type="text/javascript">
+        function show_prompt()
+        {
+        var name=prompt("Napisz imię","Imię Nazwisko");
+        if (name!=null && name!="")
+        {
+        document.write("Witaj " + name + "! jak się masz?");
+        }
+        }
+    </script>
+</head>
+<body>
+    <h2>Zadanie 9 Prompt Box</h2>
+    <p>
+        <b>Zastosowanie:</b> Okienko prompt jest używane, kiedy użytkownik ma coś wpisać np. zanim wejdzie
+        w dany moduł strony (np. hasło). Po wpisaniu wartości użytkownik może nacisnąć „OK” albo „Cancel”.
+        Jeżeli kliknie „OK” metoda zwraca wpisaną wartość a w przeciwnym wypadku zwraca null.
+    </p>
+    <input type="button" onclick="show_prompt()" value="Pokaż prompt box" />
+    <br><br>
+    <input type="button" value="zamknij okno" onclick="window.close()" />
+</body>
+</html>
