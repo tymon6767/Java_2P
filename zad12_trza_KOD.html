@@ -1,26 +1,30 @@
 <html>
   <body>
   <textarea cols="90" rows="24">
-      <div style="color:green;font-size:56px;">
-       <script language="JavaScript">
-        var D1_trz=prompt("Data1=","");
-        var G1_trz=prompt("Godzina1=","");
-        var D2_trz=prompt("Data2=","");
-        var G2_trz=prompt("Godzina2=","");
-        var sekund;
-        var d1=parseFloat(D1_trz);
-        var g1=parseFloat(G1_trz);
-        var d2=parseFloat(D2_trz);
-        var g2=parseFloat(G2_trz);
-         sekund=((d1*24+g1)-(d2*24+g2))*60*60;
-        document.write("Ilość sekund między "+d1+" godz."+g1+" a "+d2+" godz."+g2+" = "+sekund+"<br>");
-         function okno_zamknij_trz()
-          {
+﻿<!DOCTYPE html>
+<head>
+    <title> Proste obliczenia</title>
+    <meta charset="utf-8">
+</head>
+<div style+"color:red;font-size:50px;">
+    <script language="JavaScript">
+        var liczba1=prompt ("daj mianownik m=", "");
+        var m_trza=parseFloat(liczba1);
+
+
+    document.write("m="+m_trza+"<br>");
+    m1=m_trza+1;
+    m2=(m_trza+1)*m_trza;
+
+    document.write("1/"+m_trza+"=1/"+m1+"+1/"+"<br>");
+            function okno_zamknij_trz()
+            {
             window.close()
-          }
+            }
         </script>
-      </div>
-     <input type="button" value="zamknij okno" onclick="okno_zamknij_trz()"/>
-  </body>
+    </div>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_trz()" />
+</body>
+</html>
    </textarea>
 </html>
