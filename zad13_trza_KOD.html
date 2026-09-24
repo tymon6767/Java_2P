@@ -1,22 +1,30 @@
 ﻿<html>
 <body>
     <textarea cols="90" rows="24">
-    <div style="color:blue;font-size:35px;">
+﻿<!DOCTYPE html>
+<head>
+    <title> Proste obliczenia</title>
+    <meta charset="utf-8">
+</head>
+<div style+"color:red;font-size:50px;">
     <script language="JavaScript">
-        var m_trz=prompt("Podaj m=","");
-        var m=parseFloat(m_trz);
-        var mianownik1;
-        var mianownik2;
-        mianownik1=m+1;
-        mianownik2=m*(m+1);
-        document.write("1/"+m+" = 1/"+mianownik1+" + 1/"+mianownik2+"<br>");
-        function okno_zamknij_trz()
-        {
-        window.close()
-        }
-</script>
+        var liczba1=prompt ("daj mianownik m=", "");
+        var m_trza=parseFloat(liczba1);
+
+
+    document.write("m="+m_trza+"<br>");
+    m1=m_trza+1;
+    m2=(m_trza+1)*m_trza;
+
+    document.write("1/"+m_trza+"=1/"+m1+"+1/"+"<br>");
+            function okno_zamknij_trz()
+            {
+            window.close()
+            }
+        </script>
     </div>
     <input type="button" value="zamknij okno" onclick="okno_zamknij_trz()" />
 </body>
+</html>
 </textarea>
 </html>
