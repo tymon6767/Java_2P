@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <title>Zadanie 16 KOD - Trzaskalski</title>
+</head>
+<body>
+<textarea cols="110" rows="35">
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <title>Zadanie 16 - Trzaskalski</title>
+</head>
+<body>
+<script language="JavaScript">
+
+var A_trz = prompt("Podaj pierwszą liczbę A=", "1");
+var B_trz = prompt("Podaj drugą liczbę B=", "2");
+
+var A = parseFloat(A_trz);
+var B = parseFloat(B_trz);
+
+if (!isNaN(A) && !isNaN(B)) {
+    var A3 = A * A * A;
+    var B3 = B * B * B;
+    var term2 = 3 * A * A * B;
+    var term3 = 3 * A * B * B;
+    var suma = A3 + term2 + term3 + B3;
+    
+    document.write("<div style='color:navy; font-size:24px;'>wczytane liczby:&nbsp;&nbsp;&nbsp;&nbsp;A=" + A + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;B=" + B + "</div>");
+    document.write("<div style='color:navy; font-size:36px;'>(" + A + " + " + B + ")^3 = " + A + "^3 + 3*(" + A + ")^2*(" + B + ") + 3*(" + A + ")*(" + B + ")^2 + " + B + "^3 = " + A3 + " + " + term2 + " + " + term3 + " + " + B3 + " = " + suma + "</div>");
+} else {
+    document.write("Podano niepoprawne liczby.");
+}
+</script>
+</body>
+</html>
+</textarea>
+<br>
+<input type="button" value="zamknij okno" onclick="window.close()"/>
+</body>
+</html>
