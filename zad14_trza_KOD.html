@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <title>Zadanie 14 KOD - Trzaskalski</title>
+</head>
+<body>
+<textarea cols="100" rows="30">
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <title>Zadanie 14 - Trzaskalski</title>
+</head>
+<body>
+<div style="color:green; font-size:30px;">
+<script language="JavaScript">
+
+var m_trz = prompt("Podaj wartość m (liczba naturalna > 0):", "4");
+var m = parseInt(m_trz);
+
+if (m > 0) {
+    var ulamek1 = m + 2;
+    var ulamek2 = (m + 1) * (m + 2);
+    var ulamek3 = m * (m + 1);
+    
+    document.write("1/" + m + " = 1/" + ulamek1 + " + 1/" + ulamek2 + " + 1/" + ulamek3);
+} else {
+    document.write("Podano niepoprawną wartość m.");
+}
+</script>
+</div>
+</body>
+</html>
+</textarea>
+<br>
+<input type="button" value="zamknij okno" onclick="window.close()"/>
+</body>
+</html>
