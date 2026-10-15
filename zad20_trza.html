@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <title>Oblicz długości boków trójkąta</title>
+  <style>
+    body{font-family:Arial, Helvetica, sans-serif; padding:20px}
+    fieldset{margin:6px 0}
+  </style>
+</head>
+<body>
+  <h2>Wczytaj trzy punkty (nie współliniowe)</h2>
+  <fieldset>
+    <legend>Punkt A</legend>
+    x: <input id="xa_trza" type="number" step="any"> y: <input id="ya_trza" type="number" step="any">
+  </fieldset>
+  <fieldset>
+    <legend>Punkt B</legend>
+    x: <input id="xb_trza" type="number" step="any"> y: <input id="yb_trza" type="number" step="any">
+  </fieldset>
+  <fieldset>
+    <legend>Punkt C</legend>
+    x: <input id="xc_trza" type="number" step="any"> y: <input id="yc_trza" type="number" step="any">
+  </fieldset>
+
+  <button id="oblicz">Oblicz długości boków</button>
+  <div id="wynik" style="margin-top:12px;color:blue"></div>
+
+  <script>
+    // Funkcja liczy odległość między punktami (wzór na odległość w układzie współrzędnych)
+    function dist(x1,y1,x2,y2){
+      var dx = x2 - x1;
+      var dy = y2 - y1;
+      return Math.sqrt(Math.pow(dx,2) + Math.pow(dy,2));
+    }
+
+    // Funkcja sprawdza czy trzy punkty są współliniowe (wyznacznik -> pole trójkąta)
+    function czyWspolLiniowe(xa,ya,xb,yb,xc,yc){
+      // dwukrotność pola trójkąta (jeśli 0 -> współliniowe)
+      return (xb - xa)*(yc - ya) - (xc - xa)*(yb - ya);
+    }
+
+    document.getElementById('oblicz').addEventListener('click', function(){
+      var xa = parseFloat(document.getElementById('xa_trza').value);
+      var ya = parseFloat(document.getElementById('ya_trza').value);
+      var xb = parseFloat(document.getElementById('xb_trza').value);
+      var yb = parseFloat(document.getElementById('yb_trza').value);
+      var xc = parseFloat(document.getElementById('xc_trza').value);
+      var yc = parseFloat(document.getElementById('yc_trza').value);
+
+      var out = document.getElementById('wynik');
+      // Sprawdź czy wszystkie pola wypełnione
+      if ([xa,ya,xb,yb,xc,yc].some(function(v){return Number.isNaN(v);} )){
+        out.textContent = 'Wypełnij wszystkie pola liczbami.';
+        return;
+      }
+
+      var pole2 = czyWspolLiniowe(xa,ya,xb,yb,xc,yc);
+      if (Math.abs(pole2) < 1e-9){
+        out.textContent = 'Punkty są współliniowe — nie tworzą trójkąta.';
+        return;
+      }
+
+      var AB = dist(xa,ya,xb,yb);
+      var BC = dist(xb,yb,xc,yc);
+      var AC = dist(xa,ya,xc,yc);
+
+      out.innerHTML = 'Długość AB = ' + AB.toFixed(6) + '<br>' +
+                      'Długość BC = ' + BC.toFixed(6) + '<br>' +
+                      'Długość AC = ' + AC.toFixed(6);
+    });
+  </script>
+</body>
+</html>
