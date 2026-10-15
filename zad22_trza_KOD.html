@@ -1,0 +1,86 @@
+<html>
+<body>
+    <textarea cols="90" rows="24">
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Obliczanie pola oraz obwodu prostokąta</title>
+    <script>
+
+        function parseNumber(v){
+            return parseFloat(String(v).replace(',','.'));
+        }
+
+
+        function Pole_trzaskalski(a_trz,b_trz){
+            var a = parseNumber(a_trz);
+            var b = parseNumber(b_trz);
+            if (Number.isNaN(a) || Number.isNaN(b)){
+                alert('Podaj poprawne liczby dla a i b.');
+                return null;
+            }
+            var wynik = a * b;
+            // wpisz do pola formularza
+            var poleField = document.getElementsByName('pole')[0];
+            if (poleField) poleField.value = wynik.toFixed(2);
+            // pokaż alert i w tabeli
+            alert('Pole=' + wynik.toFixed(2) + ' cm^2');
+            var pokaz1 = document.getElementById('pokaz1');
+            if (pokaz1) pokaz1.innerHTML = '<td>Pole=' + wynik.toFixed(2) + ' cm^2</td>';
+            return wynik;
+        }
+
+        // Funkcja liczy obwód prostokąta i wypisuje wynik
+        function Obwod_trzaskalski(a_trz,b_trz){
+            var a = parseNumber(a_trz);
+            var b = parseNumber(b_trz);
+            if (Number.isNaN(a) || Number.isNaN(b)){
+                alert('Podaj poprawne liczby dla a i b.');
+                return null;
+            }
+            var wynik = 2 * (a + b);
+            var obwodField = document.getElementsByName('obwod')[0];
+            if (obwodField) obwodField.value = wynik.toFixed(2);
+            alert('Obwod=' + wynik.toFixed(2) + ' cm');
+            var pokaz2 = document.getElementById('pokaz2');
+            if (pokaz2) pokaz2.innerHTML = '<td>Obwod=' + wynik.toFixed(2) + ' cm</td>';
+            return wynik;
+        }
+
+
+        function Pc(r,h){
+            var r_liczba = parseNumber(r);
+            var h_liczba = parseNumber(h);
+            if (Number.isNaN(r_liczba) || Number.isNaN(h_liczba)){
+                alert('Podaj poprawne liczby dla r i h.');
+                return null;
+            }
+            var Pc_wynik = 2*Math.PI*r_liczba*r_liczba + 2*Math.PI*r_liczba*h_liczba;
+            var poleField = document.getElementsByName('pole')[0];
+            if (poleField) poleField.value = Pc_wynik.toFixed(2);
+            alert('Pc=' + Pc_wynik.toFixed(2) + ' cm^2');
+            var pokaz2 = document.getElementById('pokaz2');
+            if (pokaz2) pokaz2.innerHTML = '<td>Pc=' + Pc_wynik.toFixed(2) + ' cm^2</td>';
+            return Pc_wynik;
+        }
+    </script>
+</head>
+<body>
+    <h3>Obliczanie pola oraz obwodu prostokąta</h3>
+    <form name="formularz" onsubmit="Pole_trzaskalski(this.a_trz.value,this.b_trz.value); Obwod_trzaskalski(this.a_trz.value,this.b_trz.value); return false;">
+        Podaj a = <input size="6" name="a_trz">
+        Podaj b = <input size="6" name="b_trz">
+        <br><br>
+        <input type="submit" value="Oblicz">
+        <br><br>
+        Obwod = <input size="6" name="obwod">
+        Pole = <input size="6" name="pole">
+    </form>
+    <table>
+        <tr id="pokaz1"></tr>
+        <tr id="pokaz2"></tr>
+    </table>
+</body>
+</html>
+ </textarea>
+</body>
