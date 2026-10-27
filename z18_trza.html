@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!-- Imię Trza 27.10.2026 | Zadanie 18 -->
+<html lang="pl-PL">
+<head>
+<meta charset="utf-8">
+<title>Trza Z18_JS</title>
+
+<script>function okno_zamknij_trza(){window.close();}</script>
+</head>
+<body>
+<div style="color:navy;font-size:40px;">
+<script language="JavaScript">
+var a=parseFloat(prompt("a=",""));
+var b=parseFloat(prompt("b=",""));
+function suma_trz(a, b) { return a + b; }
+function odejmowanie_trz(a, b) { return a - b; }
+function mnozenie_trz(a, b) { return a * b; }
+function od_kwadratu_trz(a, b) { return a*a; }
+function reszta_z_dzielenia_a_przez_b_trz(a, b) { return a % b; }
+document.write("a="+a+" b="+b+"<br>");
+document.write("suma="+suma_trz(a,b)+"<br>");
+document.write("różnica="+odejmowanie_trz(a,b)+"<br>");
+document.write("iloczyn="+mnozenie_trz(a,b)+"<br>");
+document.write(a+"^2 = "+od_kwadratu_trz(a,b)+"<br>");
+document.write(b+"^2 = "+od_kwadratu_trz(b,a)+"<br>");
+document.write("reszta z dzielenia "+a+" przez "+b+" = "+reszta_z_dzielenia_a_przez_b_trz(a,b)+"<br>");
+</script>
+</div>
+<p><input type="button" value="zamknij okno" onclick="okno_zamknij_trza()"></p>
+</body>
+</html>
+<!-- Trza Z18_JS -->

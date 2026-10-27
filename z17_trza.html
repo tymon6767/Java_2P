@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!-- Imię Trza 27.10.2026 | Zadanie 17 -->
+<html lang="pl-PL">
+<head>
+<meta charset="utf-8">
+<title>Trza Z17_JS</title>
+
+<script>function okno_zamknij_trza(){window.close();}</script>
+</head>
+<body>
+<h3>Zadanie 17 - pytania teoretyczne</h3>
+<p><b>1. Cztery sposoby wyprowadzania danych w JS</b><br>
+z użyciem <u>document.write()</u>; z użyciem okienka <u>alert()</u>; do <u>okienek formularza</u>; do <u>tabeli</u>.</p>
+<p><b>2. Czym jest funkcja w JS</b><br>
+a) Jest to <u>zbiór zgrupowanych instrukcji</u>, które uruchamiamy, podając ich nazwę.<br>
+b) Każda funkcja po wywołaniu <u>wykonuje swój wewnętrzny kod</u>.<br>
+c) Funkcja może mieć <u>argumenty</u>, które wchodzą do wnętrza i są tam przetwarzane, np. suma_trz(a, b).<br>
+d) Może (nie zawsze) <u>zwrócić obliczoną wartość</u> zapisaną po słowie kluczowym <u>return</u>.</p>
+<p><b>3. Metody getElementsByName, getElementById, getElementsByTagName</b></p>
+<table border="1" cellpadding="5">
+<tr><th>Metoda</th><th>Opis</th></tr>
+<tr><td><u>getElementById("id")</u></td><td>dostęp do elementu o konkretnej wartości atrybutu id</td></tr>
+<tr><td><u>getElementsByTagName("znacznik")</u></td><td>dostęp do wszystkich elementów o danym typie znacznika, np. P lub DIV</td></tr>
+<tr><td><u>getElementsByName("nazwa")</u></td><td>dostęp do wszystkich elementów o konkretnej wartości atrybutu name</td></tr>
+</table>
+<p><b>4. Właściwości innerHTML, innerText, className</b><br>
+<b>innerHTML</b> - <u>odczyt, zmiana, wstawienie lub usunięcie kodu HTML</u> z danego elementu, np. w tabeli.<br>
+<b>innerText</b> - określa <u>ciąg znaków</u>, który zostanie umieszczony w elemencie.<br>
+<b>className</b> - określa <u>klasę CSS</u> użytą do prezentacji elementu.</p>
+
+<p><input type="button" value="zamknij okno" onclick="okno_zamknij_trza()"></p>
+</body>
+</html>
+<!-- Trza Z17_JS -->
