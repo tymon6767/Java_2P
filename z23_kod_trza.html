@@ -1,0 +1,48 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>Trza Z23_KOD</title>
+<script type="text/javascript">
+function okno_zamknij_trza()
+{
+window.close()
+}
+</script>
+</head>
+<body>
+<textarea cols="90" rows="24" readonly>
+&lt;!DOCTYPE html&gt;
+&lt;!-- Imię Trza 27.10.2026 | Zadanie 23 --&gt;
+&lt;html lang="pl-PL"&gt;
+&lt;head&gt;
+&lt;meta charset="utf-8"&gt;
+&lt;title&gt;Trza Z23_JS&lt;/title&gt;
+&lt;script type="text/javascript"&gt;
+function dlugosc_trz(D,X) { return Math.sqrt(D*D+X*X); }
+function kat_trz(D,X) { return Math.atan(D/X)*180/Math.PI; }
+function licz_trz()
+{
+var D_trz=parseFloat(document.getElementById("D").value);
+var X_trz=parseFloat(document.getElementById("X").value);
+document.getElementById("dl").value=dlugosc_trz(D_trz,X_trz).toFixed(2);
+document.getElementById("kat").value=kat_trz(D_trz,X_trz).toFixed(2);
+}
+&lt;/script&gt;
+&lt;script&gt;function okno_zamknij_trza(){window.close();}&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h3&gt;Drabina oparta o mur&lt;/h3&gt;
+D - wysokość oparcia drabiny [m]: &lt;input size="8" id="D"&gt;&lt;br&gt;&lt;br&gt;
+X - odległość oparcia drabiny od muru [m]: &lt;input size="8" id="X"&gt;&lt;br&gt;&lt;br&gt;
+&lt;input type="button" value="Oblicz" onclick="licz_trz()"&gt;&lt;br&gt;&lt;br&gt;
+Długość drabiny [m]: &lt;input size="10" id="dl" readonly&gt;&lt;br&gt;&lt;br&gt;
+Kąt nachylenia [stopnie]: &lt;input size="10" id="kat" readonly&gt;
+&lt;p&gt;&lt;input type="button" value="zamknij okno" onclick="okno_zamknij_trza()"&gt;&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+&lt;!-- Trza Z23_JS --&gt;
+</textarea><br>
+<input type="button" value="zamknij okno" onclick="okno_zamknij_trza()"/>
+</body>
+</html>
+<!-- Trza Z23_KOD -->

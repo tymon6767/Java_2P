@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!-- Imię Trza 27.10.2026 | Zadanie 26 -->
+<html lang="pl-PL">
+<head>
+<meta charset="utf-8">
+<title>Trza Z26_JS</title>
+<script type="text/javascript">
+function ramie_trz(a,b,h) { return Math.sqrt(h*h+Math.pow(Math.abs(a-b)/2,2)); }
+function Pow_trza(a,b,h) { return (a+b)*h/2; }
+function Obw_trza(a,b,h) { return a+b+2*ramie_trz(a,b,h); }
+function dane_trz() { return [parseFloat(document.getElementsByName("a")[0].value), parseFloat(document.getElementsByName("b")[0].value), parseFloat(document.getElementsByName("h")[0].value)]; }
+function licz_trz()
+{
+var d=dane_trz();
+document.getElementsByName("pole")[0].value=Pow_trza(d[0],d[1],d[2]).toFixed(2);
+document.getElementsByName("obwod")[0].value=Obw_trza(d[0],d[1],d[2]).toFixed(2);
+}
+function pisz_trz()
+{
+var d=dane_trz();
+document.open();
+document.write("<h2>Trapez równoramienny</h2>a="+d[0]+" b="+d[1]+" h="+d[2]+"<br>Pole = "+Pow_trza(d[0],d[1],d[2]).toFixed(2)+"<br>Obwód = "+Obw_trza(d[0],d[1],d[2]).toFixed(2)+"<br><br><input type='button' value='wróć' onclick='location.reload()'>");
+document.close();
+}
+</script>
+<script>function okno_zamknij_trza(){window.close();}</script>
+</head>
+<body>
+<h3>Trapez równoramienny</h3>
+<form name="trapez">
+podstawa dolna a = <input size="8" name="a"><br><br>
+podstawa górna b = <input size="8" name="b"><br><br>
+wysokość h = <input size="8" name="h"><br><br>
+<input type="button" value="Oblicz (formularz)" onclick="licz_trz()">
+<input type="button" value="Pokaż (document.write)" onclick="pisz_trz()"><br><br>
+Pole = <input size="10" name="pole"> Obwód = <input size="10" name="obwod">
+</form>
+<p><input type="button" value="zamknij okno" onclick="okno_zamknij_trza()"></p>
+</body>
+</html>
+<!-- Trza Z26_JS -->

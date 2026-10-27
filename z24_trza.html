@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!-- Imię Trza 27.10.2026 | Zadanie 24 -->
+<html lang="pl-PL">
+<head>
+<meta charset="utf-8">
+<title>Trza Z24_JS</title>
+
+<script>function okno_zamknij_trza(){window.close();}</script>
+</head>
+<body>
+<div style="font-size:26px;">
+<script language="JavaScript">
+var x1_trz=parseFloat(prompt("x1=",""));
+var x2_trz=parseFloat(prompt("x2=",""));
+document.write("wczytane liczby: x1="+x1_trz+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x2="+x2_trz+"<br><br>");
+// UWAGA: wzory y1,y2,y3 w instrukcji sa na zdjeciach - PONIZSZE SA PRZYBLIZONE, DO ZWERYFIKOWANIA
+var y1=Math.pow(x1_trz,x2_trz);
+var y2=Math.sqrt(x1_trz)+Math.sqrt(x2_trz);
+var y3=Math.pow(x1_trz,2)+Math.pow(x2_trz,2);
+document.write("y1="+y1.toFixed(2)+"<br>y2="+y2.toFixed(2)+"<br>y3="+y3.toFixed(2)+"<br><br>");
+// x1 wczytane w stopniach -> radiany: rad=(st*Math.PI)/180
+var rad=(x1_trz*Math.PI)/180;
+document.write("wczytane liczby: w stopniach x1="+x1_trz+" [stopniach] x1="+rad.toFixed(2)+" [radianach]<br><br>");
+document.write("sin(x1)="+Math.sin(rad).toFixed(2)+"<br>cos(x1)="+Math.cos(rad).toFixed(2)+"<br>tg(x1)="+Math.tan(rad).toFixed(2)+"<br><br>");
+document.write("|x1|="+Math.abs(x1_trz).toFixed(2)+"<br>ln(x1)="+Math.log(x1_trz).toFixed(2)+"<br>e^x2="+Math.exp(x2_trz).toFixed(2)+"<br>");
+</script>
+</div>
+<p><input type="button" value="zamknij okno" onclick="okno_zamknij_trza()"></p>
+</body>
+</html>
+<!-- Trza Z24_JS -->

@@ -1,0 +1,49 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>Trza Z24_KOD</title>
+<script type="text/javascript">
+function okno_zamknij_trza()
+{
+window.close()
+}
+</script>
+</head>
+<body>
+<textarea cols="90" rows="24" readonly>
+&lt;!DOCTYPE html&gt;
+&lt;!-- Imię Trza 27.10.2026 | Zadanie 24 --&gt;
+&lt;html lang="pl-PL"&gt;
+&lt;head&gt;
+&lt;meta charset="utf-8"&gt;
+&lt;title&gt;Trza Z24_JS&lt;/title&gt;
+
+&lt;script&gt;function okno_zamknij_trza(){window.close();}&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div style="font-size:26px;"&gt;
+&lt;script language="JavaScript"&gt;
+var x1_trz=parseFloat(prompt("x1=",""));
+var x2_trz=parseFloat(prompt("x2=",""));
+document.write("wczytane liczby: x1="+x1_trz+"&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;x2="+x2_trz+"&lt;br&gt;&lt;br&gt;");
+// UWAGA: wzory y1,y2,y3 w instrukcji sa na zdjeciach - PONIZSZE SA PRZYBLIZONE, DO ZWERYFIKOWANIA
+var y1=Math.pow(x1_trz,x2_trz);
+var y2=Math.sqrt(x1_trz)+Math.sqrt(x2_trz);
+var y3=Math.pow(x1_trz,2)+Math.pow(x2_trz,2);
+document.write("y1="+y1.toFixed(2)+"&lt;br&gt;y2="+y2.toFixed(2)+"&lt;br&gt;y3="+y3.toFixed(2)+"&lt;br&gt;&lt;br&gt;");
+// x1 wczytane w stopniach -&gt; radiany: rad=(st*Math.PI)/180
+var rad=(x1_trz*Math.PI)/180;
+document.write("wczytane liczby: w stopniach x1="+x1_trz+" [stopniach] x1="+rad.toFixed(2)+" [radianach]&lt;br&gt;&lt;br&gt;");
+document.write("sin(x1)="+Math.sin(rad).toFixed(2)+"&lt;br&gt;cos(x1)="+Math.cos(rad).toFixed(2)+"&lt;br&gt;tg(x1)="+Math.tan(rad).toFixed(2)+"&lt;br&gt;&lt;br&gt;");
+document.write("|x1|="+Math.abs(x1_trz).toFixed(2)+"&lt;br&gt;ln(x1)="+Math.log(x1_trz).toFixed(2)+"&lt;br&gt;e^x2="+Math.exp(x2_trz).toFixed(2)+"&lt;br&gt;");
+&lt;/script&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;input type="button" value="zamknij okno" onclick="okno_zamknij_trza()"&gt;&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+&lt;!-- Trza Z24_JS --&gt;
+</textarea><br>
+<input type="button" value="zamknij okno" onclick="okno_zamknij_trza()"/>
+</body>
+</html>
+<!-- Trza Z24_KOD -->

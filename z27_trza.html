@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!-- Imię Trza 27.10.2026 | Zadanie 27 -->
+<html lang="pl-PL">
+<head>
+<meta charset="utf-8">
+<title>Trza Z27_JS</title>
+<script type="text/javascript">
+function wysokosc_trz(odl_trz,s_trz) { return Math.sqrt(s_trz*s_trz-odl_trz*odl_trz); }
+function kat_trz(odl_trz,s_trz) { return Math.acos(odl_trz/s_trz)*180/Math.PI; }
+function licz_trz()
+{
+var odl_trz=parseFloat(document.getElementById("odl_trz").value);
+var s_trz=parseFloat(document.getElementById("s_trz").value);
+if (s_trz<=odl_trz) { alert("Droga s musi być większa od odległości odl."); return; }
+document.getElementById("h_trz").value=wysokosc_trz(odl_trz,s_trz).toFixed(2);
+document.getElementById("kat_trz").value=kat_trz(odl_trz,s_trz).toFixed(2);
+}
+</script>
+<script>function okno_zamknij_trza(){window.close();}</script>
+</head>
+<body>
+<h3>Artur, Dawid i samolot</h3>
+odl - odległość Artura od Dawida [m]: <input size="8" id="odl_trz"><br><br>
+s - droga samolotu do chwili nad Dawidem [m]: <input size="8" id="s_trz"><br><br>
+<input type="button" value="Oblicz" onclick="licz_trz()"><br><br>
+Wysokość h [m]: <input size="10" id="h_trz" readonly><br><br>
+Kąt startu [stopnie]: <input size="10" id="kat_trz" readonly>
+<p><input type="button" value="zamknij okno" onclick="okno_zamknij_trza()"></p>
+</body>
+</html>
+<!-- Trza Z27_JS -->

@@ -1,0 +1,46 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>Trza Z25_KOD</title>
+<script type="text/javascript">
+function okno_zamknij_trza()
+{
+window.close()
+}
+</script>
+</head>
+<body>
+<textarea cols="90" rows="24" readonly>
+&lt;!DOCTYPE html&gt;
+&lt;!-- Imię Trza 27.10.2026 | Zadanie 25 --&gt;
+&lt;html lang="pl-PL"&gt;
+&lt;head&gt;
+&lt;meta charset="utf-8"&gt;
+&lt;title&gt;Trza Z25_JS&lt;/title&gt;
+
+&lt;script&gt;function okno_zamknij_trza(){window.close();}&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div style="font-family:Georgia;color:#8A2BE2;font-size:27px;"&gt;
+&lt;script language="JavaScript"&gt;
+// Imię Trza - Zadanie 25: rozpad promieniotworczy
+// testy: wegiel C14 T1/2 = 5700 lat, rad Ra-226 T1/2 = 1600 lat
+var No_trz=parseFloat(prompt("No [sztuk] =",""));
+var t_trz=parseFloat(prompt("t [lat] =",""));
+var T12_trz=parseFloat(prompt("T1/2 [lat] =","5700"));
+var lambda_trz=Math.log(2)/T12_trz;
+var N_trz=No_trz*Math.pow(Math.E,-lambda_trz*t_trz);
+document.write("No = "+No_trz+" [sztuk]&lt;br&gt;t = "+t_trz+" [rok]&lt;br&gt;T1/2 = "+T12_trz+" [rok]&lt;br&gt;");
+document.write("&lt;font color='#D2691E'&gt;λ = "+lambda_trz.toFixed(7)+" [1/rok]&lt;/font&gt;&lt;br&gt;");
+document.write("&lt;font color='#008B8B' size='6'&gt;N = "+N_trz.toFixed(2)+" [sztuk]&lt;/font&gt;&lt;br&gt;");
+&lt;/script&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;input type="button" value="zamknij okno" onclick="okno_zamknij_trza()"&gt;&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+&lt;!-- Trza Z25_JS --&gt;
+</textarea><br>
+<input type="button" value="zamknij okno" onclick="okno_zamknij_trza()"/>
+</body>
+</html>
+<!-- Trza Z25_KOD -->

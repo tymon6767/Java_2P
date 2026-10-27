@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<!-- Imię Trza 27.10.2026 | Zadanie 25 -->
+<html lang="pl-PL">
+<head>
+<meta charset="utf-8">
+<title>Trza Z25_JS</title>
+
+<script>function okno_zamknij_trza(){window.close();}</script>
+</head>
+<body>
+<div style="font-family:Georgia;color:#8A2BE2;font-size:27px;">
+<script language="JavaScript">
+// Imię Trza - Zadanie 25: rozpad promieniotworczy
+// testy: wegiel C14 T1/2 = 5700 lat, rad Ra-226 T1/2 = 1600 lat
+var No_trz=parseFloat(prompt("No [sztuk] =",""));
+var t_trz=parseFloat(prompt("t [lat] =",""));
+var T12_trz=parseFloat(prompt("T1/2 [lat] =","5700"));
+var lambda_trz=Math.log(2)/T12_trz;
+var N_trz=No_trz*Math.pow(Math.E,-lambda_trz*t_trz);
+document.write("No = "+No_trz+" [sztuk]<br>t = "+t_trz+" [rok]<br>T1/2 = "+T12_trz+" [rok]<br>");
+document.write("<font color='#D2691E'>λ = "+lambda_trz.toFixed(7)+" [1/rok]</font><br>");
+document.write("<font color='#008B8B' size='6'>N = "+N_trz.toFixed(2)+" [sztuk]</font><br>");
+</script>
+</div>
+<p><input type="button" value="zamknij okno" onclick="okno_zamknij_trza()"></p>
+</body>
+</html>
+<!-- Trza Z25_JS -->
