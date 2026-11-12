@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadanie 32 – Trza</title>
+</head>
+<body bgcolor="silver">
+    <div id="pierwszyDiv"></div>
+    <div id="drugiDiv"></div>
+
+    <script type="text/javascript">
+        function uczen(nazwisko, numer, miesiacUrodzenia, dzienUrodzenia) {
+            this.nazwisko = nazwisko;
+            this.numer = numer;
+            this.miesiacUrodzenia = miesiacUrodzenia;
+            this.dzienUrodzenia = dzienUrodzenia;
+        }
+
+        uczen.prototype.wypisz = function () {
+            return "Nazwisko: " + this.nazwisko +
+                ", numer: " + this.numer +
+                ", miesiąc urodzenia: " + this.miesiacUrodzenia +
+                ", dzień urodzenia: " + this.dzienUrodzenia;
+        };
+
+        var osoba1 = new uczen("Trzaskalski", 21, 3, 26);
+        var osoba2 = new uczen("Tryksza", 20, 11, 02);
+        var osoba3 = new uczen("Grzegorzak", 03, 12, 24);
+
+        osoba1.klasa = "pierwszy obiekt";
+        osoba1.uczen_pokaz_trza = function () {
+            return this.wypisz();
+        };
+
+        document.getElementById("pierwszyDiv").style.cssText =
+            "background-color: yellow; color: blue; font-size: " +
+            (35 + osoba1.miesiacUrodzenia) + "px; padding: 10px;";
+        document.getElementById("drugiDiv").style.cssText =
+            "background-color: yellow; color: green; font-size: " +
+            (20 + osoba1.dzienUrodzenia) + "px; padding: 10px;";
+
+        document.getElementById("pierwszyDiv").innerHTML =
+            "Dane wszystkich obiektów:<br>" +
+            "osoba1: " + osoba1.wypisz() + "<br>" +
+            "osoba2: " + osoba2.wypisz() + "<br>" +
+            "osoba3: " + osoba3.wypisz();
+
+        document.getElementById("drugiDiv").innerHTML =
+            "Metoda dopisana poza ciałem obiektu:<br>" +
+            osoba1.uczen_pokaz_trza();
+    </script>
+</body>
+</html>
