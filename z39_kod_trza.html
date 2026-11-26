@@ -1,0 +1,26 @@
+﻿<html>
+<head>
+    <textarea cols="90" rows="24">
+    <title>Trzaskalski Z39_JS</title>
+</head>
+<body>
+    <p style="color: #008000; font-size: 42px;">Menu</p>
+    <br>
+    <p style="color: #FF0000; font-size: 42px;">1- Czerwony</p>
+    <p style="color: #0000FF; font-size: 42px;">2- Niebieski</p>
+
+    <input type="button" name="nazwisko_ucznia" value="Oblicz" onclick="fun_trz()" />
+    <script>
+        function fun_trz() {
+        var x_trz = prompt("Podaj kolor", "");
+        if(x_trz == 1 || x_trz.toLowerCase() == "czerwony") {
+        document.write('<h1 style="color:#FF0000;">wczytałeś kolor czerwony</h1><br />');
+        }
+        else if(x_trz == 2 || x_trz.toLowerCase() == "niebieski") {
+        document.write('<h2 style="color:#0000FF;">wczytałeś kolor niebieski</h2><br />');
+        }
+        }
+    </script>
+</body>
+ </textarea>
+</html>
